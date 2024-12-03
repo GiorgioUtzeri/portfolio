@@ -1,0 +1,144 @@
+.a-propos {
+  height: auto;
+  background-color: #F4F1EB;
+  }
+  
+  .text-section {
+    width: 40%;
+    color: #000000;
+    text-align: justify;
+    padding: 7vh;
+  }
+  
+  .image-section {
+    width: 60%;
+    padding: 20px;
+    background-color: #BBC7CE;
+    height: 80vh;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+  
+  .box {
+    position: relative;
+    width: 39%;
+    aspect-ratio: 1;
+  }
+  
+  .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .img-bor {
+    z-index: -1;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 98.5%;
+    transform: translate(15px,15px);
+    transition: transform 0.8s ease-in-out;
+  }
+  
+  #img-bor {
+    outline: 6px solid #F4F1EB;
+  }
+  
+  .box img:hover + .img-bor {
+    transform: translate(0,0);
+    transition: transform 0.8s ease-in-out;
+  }
+  
+  .text-section h1 {
+    position: relative;
+    top: -5vh;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .text-section h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #6B7D8A;
+    margin: 5px auto;
+  }
+  
+  .image-section>img{
+    margin-left: 40vh;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 1024px) {
+    .text-section, .image-section {
+        width: 45%;
+        padding: 5vh 2vw;
+    }
+    .container {
+        flex-direction: column;
+        gap: 4vh;
+    }
+    .text-section {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .a-propos {
+        height: auto;
+        padding: 5vh 2vw;
+    }
+    .text-section {
+        width: 100%;
+        text-align: center;
+        padding: 5vh 0;
+    }
+    .image-section {
+        width: 100%;
+        height: 50vh;    
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);    
+      }
+    .container {
+        flex-direction: column;
+        gap: 4vh;
+    }
+    .box {
+        width: 70%; 
+    }
+    .text-section h1 {
+        font-size: 2rem;
+        margin-bottom: 1vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-section {
+        padding: 3vh 0;
+    }
+    .text-section h1 {
+        font-size: 1.8rem;
+    }
+    .image-section {
+        height: auto;
+    }
+    .box {
+        width: 80%; 
+    }
+}
