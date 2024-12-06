@@ -30,7 +30,8 @@
             <img class="nav-img" src="assets/black_logo.png" width="50" height="55">
         </a>
         <div class="nav-left">
-            <a href="assets/CV.pdf" class="cv-link" target="_blank">CV&nbsp;<i class="fa fa-download"></i></a>
+            <a href="assets/CV.pdf" class="cv-link" target="_blank">CV&nbsp;<i
+                    class="fa fa-download"></i></a>
         </div>
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
         <label for="menu-toggle" class="menu-icon">
@@ -38,40 +39,38 @@
             <i class="fas fa-bars menu-open"></i>
         </label>
         <ol class="nav-center">
-            <li><a href="#a-propos">À&nbsp;Propos</a></li>
-            <li><a href="#competences">Compétences</a></li>
-            <li><a href="#projets">Projets</a></li>
-            <li><a href="#formations">Formations</a></li>
-            <li><a href="#experiences">Expériences</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#a-propos" data-translate="propos">À&nbsp;Propos</a></li>
+            <li><a href="#competences" data-translate="comp">Compétences</a></li>
+            <li><a href="#projets" data-translate="proj">Projets</a></li>
+            <li><a href="#formations" data-translate="form">Formations</a></li>
+            <li><a href="#experiences" data-translate="exp">Expériences</a></li>
+            <li><a href="#contact" data-translate="cont">Contact</a></li>
         </ol>
     </nav>
 
     <section class="hero">
         <div class="content">
-            <h1>Portfolio</h1>
-            <h2>Giorgio UTZERI</h2>
-            <p>Étudiant en BUT Informatique</p>
-            <h3 style="padding: 20px;">Site toujours en cours de développement.</h3>
+            <h1 data-translate="hero-title">Portfolio</h1>
+            <h2 data-translate="hero-name">Giorgio UTZERI</h2>
+            <p data-translate="hero-description">Étudiant en BUT Informatique</p>
         </div>
     </section>
 
     <section id="a-propos" class="a-propos">
         <div class="container section">
             <div class="text-section">
-                <h1>À Propos</h1>
-                <p>
+                <h1 data-translate="apropos-h1">À Propos</h1>
+                <p data-translate="apropos-p">
                     🙍‍♂️ Présentation :<br>
-                    Je m'appelle Giorgio Utzeri, j'ai 19 ans, et je suis passionné par la
-                    programmation. Je m'intéresse à une variété de langages et de méthodes de travail afin de me
-                    perfectionner au quotidien.
+                    Je m'appelle Giorgio Utzeri, j'ai 19 ans, et je suis passionné par la programmation. Je m'intéresse
+                    à une variété de langages et de méthodes de travail afin de me perfectionner au quotidien.
                     <br><br>📖 Études :<br>
                     Je suis actuellement en deuxième année de BUT Informatique à l’Université de Lille, parcours A
                     (réalisation d’applications : conception, développement et validation), sur le campus de l’IUT de
                     Villeneuve-d’Ascq.
                     <br><br>🏙️ Vie étudiante à Lille :<br>
-                    Dès le début de mon parcours en BUT, je réside à Lille, plus précisément à Hellemmes. Cela me
-                    permet de vivre de manière indépendante tout en étant proche de mon IUT.
+                    Dès le début de mon parcours en BUT, je réside à Lille, plus précisément à Hellemmes. Cela me permet
+                    de vivre de manière indépendante tout en étant proche de mon IUT.
                 </p>
             </div>
             <div class="image-section">
@@ -83,100 +82,125 @@
                 </div>
             </div>
         </div>
-        </div>
+
         <div class="button section">
             <div id="button" class="buttons-propos">
                 <button id="langues" class="langues show">
-                    <p>Langues</p>
+                    <p data-translate="apropos-langues">Langues</p>
                 </button>
                 <button id="softskill" class="softskill">
-                    <p>Soft Skills</p>
+                    <p data-translate="apropos-soft">Soft Skills</p>
                 </button>
                 <button id="passion" class="passion">
-                    <p>Passions</p>
+                    <p data-translate="apropos-passions">Passions</p>
                 </button>
             </div>
         </div>
 
         <div class="skill section">
-
-
             <div id="rectangle" class="rectangle show">
+                <div class="text-langue">
+                    <h3 data-translate="apropos-changer">Cliquez sur un drapeau pour changer la langue du site.</h3>
+                </div>
                 <div class="content-langue">
                     <div class="francais">
-                        <img src="assets/France.png">
+                        <button onclick="changeLanguage('fr')" style="background-color: #BBC7CE;">
+                            <img src="assets/France.png">
+                        </button>
                         <h1>Français</h1>
                         <p>Langue Maternelle</p>
                     </div>
                     <div class="italien">
-                        <img src="assets/Italie.png">
+                        <button onclick="changeLanguage('it')" style="background-color: #BBC7CE;">
+                            <img src="assets/Italie.png">
+                        </button>
                         <h1>Italien</h1>
                         <p>Double Nationalité</p>
                     </div>
                     <div class="anglais">
-                        <img src="assets/anglais.png">
+                        <button onclick="changeLanguage('en')" style="background-color: #BBC7CE;">
+                            <img src="assets/anglais.png">
+                        </button>
                         <h1>Anglais</h1>
                         <p>Niveau B1+</p>
                     </div>
                 </div>
             </div>
 
-
             <div id="rectangle2" class="rectangle2">
                 <div class="content-skill">
                     <ul>
-                        <li style="font-weight: bold;"><i class="fas fa-users" style="margin-right: 5px;"></i>Travail en équipe : </li>
-                        <p style="margin-bottom: 10px;">Habitué à travailler en groupe sur des projets collaboratifs, j'utilise des méthodologies
-                            agiles comme Scrum pour une bonne coordination et répartition des tâches.</p>
-                        <li style="font-weight: bold;"><i class="fas fa-sync-alt" style="margin-right: 5px;"></i>Adaptabilité :</li>
-                        <p style="margin-bottom: 10px;"></i>Mes expériences variées en programmation et en emploi saisonnier m'ont appris à m'adapter
-                            rapidement aux besoins et aux environnements changeants.</p>
-                        <li style="font-weight: bold;"><i class="fas fa-comments" style="margin-right: 5px;"></i>Communication :</li>
-                        <p style="margin-bottom: 10px;">En tant que développeur web et employé polyvalent, je sais transmettre clairement les
-                            informations et comprendre les besoins des clients et des équipes.</p>
-                        <li style="font-weight: bold;"><i class="fas fa-chart-line" style="margin-right: 5px;"></i>Esprit analytique :</li>
-                        <p>Mes projets techniques m'ont appris à analyser les besoins et résoudre efficacement les
-                            problèmes, même pour des tâches complexes.</p>
+                        <li style="font-weight: bold;" data-translate="skill-team-text">
+                            <i class="fas fa-users" style="margin-right: 5px;"></i>Travail en équipe :
+                        </li>
+                        <p style="margin-bottom: 10px;" data-translate="skill-team">Habitué à travailler en groupe sur
+                            des projets collaboratifs, j'utilise des méthodologies agiles comme Scrum pour une bonne
+                            coordination et répartition des tâches.</p>
+                        <li style="font-weight: bold;" data-translate="skill-adapt-text">
+                            <i class="fas fa-sync-alt" style="margin-right: 5px;"></i>Adaptabilité :
+                        </li>
+                        <p style="margin-bottom: 10px;" data-translate="skill-adapt">Mes expériences variées en
+                            programmation et en emploi saisonnier m'ont appris à m'adapter rapidement aux besoins et aux
+                            environnements changeants.</p>
+                        <li style="font-weight: bold;" data-translate="skill-comm-text">
+                            <i class="fas fa-comments" style="margin-right: 5px;"></i>Communication :
+                        </li>
+                        <p style="margin-bottom: 10px;" data-translate="skill-comm">En tant que développeur web et
+                            employé polyvalent, je sais transmettre clairement les informations et comprendre les
+                            besoins des clients et des équipes.</p>
+                        <li style="font-weight: bold;" data-translate="skill-analytical-text">
+                            <i class="fas fa-chart-line" style="margin-right: 5px;"></i>Esprit analytique :
+                        </li>
+                        <p data-translate="skill-analytical">Mes projets techniques m'ont appris à analyser les besoins
+                            et résoudre efficacement les problèmes, même pour des tâches complexes.</p>
                     </ul>
                 </div>
             </div>
-
 
             <div id="rectangle3" class="rectangle3">
                 <div class="content-passion">
                     <ul>
-                        <li style="font-weight: bold;"><i class="fas fa-running" style="margin-right: 5px;"></i>Musculation et ski :</li>
-                        <p style="margin-bottom: 10px;">La musculation et le ski m'apportent discipline et persévérance, en me poussant constamment à
-                            relever de nouveaux défis physiques.</p>
-                        <li style="font-weight: bold;"><i class="fas fa-globe" style="margin-right: 5px;"></i>Exploration culturelle :</li>
-                        <p style="margin-bottom: 10px;">Passionné d'exploration, j'aime découvrir de nouvelles cultures, ce qui m'aide à m'adapter et
-                            à interagir avec des personnes d’horizons divers.</p>
-                        <li style="font-weight: bold;"><i class="fas fa-gamepad" style="margin-right: 5px;"></i>Jeux vidéo et développement de jeux :</li>
-                        <p>Les jeux vidéo m'intéressent autant comme joueur que comme développeur. Concevoir des projets
-                            autour de jeux comme Minecraft me permet de combiner créativité et technique.</p>
+                        <li style="font-weight: bold;" data-translate="passion-sport-text">
+                            <i class="fas fa-running" style="margin-right: 5px;"></i>Musculation et ski :
+                        </li>
+                        <p style="margin-bottom: 10px;" data-translate="passion-sport">La musculation et le ski
+                            m'apportent discipline et persévérance, en me poussant constamment à relever de nouveaux
+                            défis physiques.</p>
+                        <li style="font-weight: bold;" data-translate="passion-culture-text">
+                            <i class="fas fa-globe" style="margin-right: 5px;"></i>Exploration culturelle :
+                        </li>
+                        <p style="margin-bottom: 10px;" data-translate="passion-culture">Passionné d'exploration, j'aime
+                            découvrir de nouvelles cultures, ce qui m'aide à m'adapter et à interagir avec des personnes
+                            d’horizons divers.</p>
+                        <li style="font-weight: bold;" data-translate="passion-games-text">
+                            <i class="fas fa-gamepad" style="margin-right: 5px;"></i>Jeux vidéo et développement de jeux
+                            :
+                        </li>
+                        <p data-translate="passion-games">Les jeux vidéo m'intéressent autant comme joueur que comme
+                            développeur. Concevoir des projets autour de jeux comme Minecraft me permet de combiner
+                            créativité et technique.</p>
                     </ul>
                 </div>
             </div>
-
         </div>
     </section>
 
     <section id="competences" class="competences section">
         <div class="compPoly">
-            <h1>Compétences</h1>
+            <h1 data-translate="comp-title">Compétences</h1>
             <div class="card-sheet">
                 <div class="flip-container hover">
                     <div class="flipper">
                         <div class="front">
-                            <p>Programmation</p>
+                            <p data-translate="comp-programming">Programmation</p>
                         </div>
                         <div class="back">
                             <ul>
-                                <li>Langages Objets</li>
-                                <li>Java</li>
-                                <li>SQL</li>
-                                <li>JavaScript</li>
-                                <li>C</li>
+                                <li data-translate="comp-object-languages">Langages Objets</li>
+                                <li data-translate="comp-java">Java</li>
+                                <li data-translate="comp-sql">SQL</li>
+                                <li data-translate="comp-javascript">JavaScript</li>
+                                <li data-translate="comp-c">C</li>
                             </ul>
                         </div>
                     </div>
@@ -184,15 +208,15 @@
                 <div class="flip-container hover">
                     <div class="flipper">
                         <div class="front">
-                            <p>Informatique</p>
+                            <p data-translate="comp-it">Informatique</p>
                         </div>
                         <div class="back">
                             <ul>
-                                <li>Gestion Git</li>
-                                <li>Figma</li>
-                                <li>Méthode Scrum</li>
-                                <li>NodeJs</li>
-                                <li>Linux</li>
+                                <li data-translate="comp-git">Gestion Git</li>
+                                <li data-translate="comp-figma">Figma</li>
+                                <li data-translate="comp-scrum">Méthode Scrum</li>
+                                <li data-translate="comp-nodejs">NodeJs</li>
+                                <li data-translate="comp-linux">Linux</li>
                             </ul>
                         </div>
                     </div>
@@ -200,14 +224,14 @@
                 <div class="flip-container hover">
                     <div class="flipper">
                         <div class="front">
-                            <p>Développement Web</p>
+                            <p data-translate="comp-web-dev">Développement Web</p>
                         </div>
                         <div class="back">
                             <ul>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>jQuery</li>
-                                <li>WordPress</li>
+                                <li data-translate="comp-html">HTML</li>
+                                <li data-translate="comp-css">CSS</li>
+                                <li data-translate="comp-jquery">jQuery</li>
+                                <li data-translate="comp-wordpress">WordPress</li>
                             </ul>
                         </div>
                     </div>
@@ -215,25 +239,24 @@
                 <div class="flip-container hover">
                     <div class="flipper">
                         <div class="front">
-                            <p>Autres</p>
+                            <p data-translate="comp-other">Autres</p>
                         </div>
                         <div class="back">
                             <ul>
-                                <li>Communication</li>
-                                <li>Marketing</li>
-                                <li>Travail d'Equipe</li>
+                                <li data-translate="comp-communication">Communication</li>
+                                <li data-translate="comp-marketing">Marketing</li>
+                                <li data-translate="comp-teamwork">Travail d'Equipe</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <section id="projets" class="projets section">
         <div class="cont-projets">
-            <h1>Projets</h1>
+            <h1 data-translate="projects-title">Projets</h1>
 
             <ul class="card-list">
                 <li class="card">
@@ -241,8 +264,8 @@
                         style="background-image: url(assets/projets/spaceclicker.jpg);">
                     </a>
                     <a class="card-description" id="space-clicker">
-                        <h2>Space Clicker</h2>
-                        <p class="projet">Projet d'Études</p>
+                        <h2 data-translate="project-spaceclicker">Space Clicker</h2>
+                        <p class="projet" data-translate="project-study">Projet d'Études</p>
                         <p><i class="fab fa-java"></i><i class="fab fa-gitlab"></i><i class="fas fa-users"></i></p>
                     </a>
                 </li>
@@ -250,8 +273,8 @@
                     <a class="card-image" id="parcoursup" style="background-image: url(assets/projets/parcoursup.jpg);">
                     </a>
                     <a class="card-description" id="parcoursup">
-                        <h2>Parcoursup</h2>
-                        <p class="projet">Projet d'Études</p>
+                        <h2 data-translate="project-parcoursup">Parcoursup</h2>
+                        <p class="projet" data-translate="project-study">Projet d'Études</p>
                         <p><i class="fas fa-database"></i><i class="fab fa-gitlab"></i><i class="fas fa-users"></i></p>
                     </a>
                 </li>
@@ -259,8 +282,8 @@
                     <a class="card-image" id="appli-classifier" style="background-image: url(assets/projets/iris.jpg);">
                     </a>
                     <a class="card-description" id="appli-classifier">
-                        <h2>Application-Classification</h2>
-                        <p class="projet">Projet d'Études</p>
+                        <h2 data-translate="project-classifier">Application-Classification</h2>
+                        <p class="projet" data-translate="project-study">Projet d'Études</p>
                         <p><i class="fab fa-java"></i><i class="fab fa-gitlab"></i><i class="fas fa-users"></i></p>
                     </a>
                 </li>
@@ -268,17 +291,18 @@
                     <a class="card-image" id="serveur-mc" style="background-image: url(assets/projets/smmcraft.png);">
                     </a>
                     <a class="card-description" id="serveur-mc">
-                        <h2>Serveur de jeu en ligne</h2>
-                        <p class="projet">Projet Personnel</p>
-                        <p><i class="fab fa-java"></i><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fas fa-ad"></i></p>
+                        <h2 data-translate="project-server">Serveur de jeu en ligne</h2>
+                        <p class="projet" data-translate="project-personal">Projet Personnel</p>
+                        <p><i class="fab fa-java"></i><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i
+                                class="fas fa-ad"></i></p>
                     </a>
                 </li>
                 <li class="card">
                     <a class="card-image" id="jeu-echec" style="background-image: url(assets/projets/echec.png);">
                     </a>
                     <a class="card-description" id="jeu-echec">
-                        <h2>Jeu d'échec WEB</h2>
-                        <p class="projet">Projet Personnel</p>
+                        <h2 data-translate="project-chess">Jeu d'échec WEB</h2>
+                        <p class="projet" data-translate="project-personal">Projet Personnel</p>
                         <p><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fab fa-js"></i></p>
                     </a>
                 </li>
@@ -286,8 +310,8 @@
                     <a class="card-image" id="portfolio" style="background-image: url(assets/white_logo.png);">
                     </a>
                     <a class="card-description" id="portfolio">
-                        <h2>Portfolio</h2>
-                        <p class="projet">Projet Personnel / Projet d'Études</p>
+                        <h2 data-translate="project-portfolio">Portfolio</h2>
+                        <p class="projet" data-translate="project-personal-study">Projet Personnel / Projet d'Études</p>
                         <p><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fab fa-js"></i></p>
                     </a>
                 </li>
@@ -295,18 +319,17 @@
                     <a class="card-image" id="ecovoit" style="background-image: url(assets/projets/ecovoit.jpg);">
                     </a>
                     <a class="card-description" id="ecovoit">
-                        <h2>EcoVoit</h2>
-                        <p class="projet">Projet d'Études</p>
+                        <h2 data-translate="project-ecovoit">EcoVoit</h2>
+                        <p class="projet" data-translate="project-study">Projet d'Études</p>
                         <p><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fas fa-users"></i></p>
                     </a>
                 </li>
-
                 <li class="card">
                     <a class="card-image" id="planetgame" style="background-image: url(assets/projets/planetgame.png);">
                     </a>
                     <a class="card-description" id="planetgame">
-                        <h2>PlanetGame</h2>
-                        <p class="projet">Projet d'Études</p>
+                        <h2 data-translate="project-planetgame">PlanetGame</h2>
+                        <p class="projet" data-translate="project-study">Projet d'Études</p>
                         <p><i class="fab fa-java"></i></p>
                     </a>
                 </li>
@@ -314,18 +337,20 @@
                     <a class="card-image" id="sncf" style="background-image: url(assets/projets/sncf.jpg);">
                     </a>
                     <a class="card-description" id="sncf">
-                        <h2>Application SNCF</h2>
-                        <p class="projet">Projet d'Études</p>
-                        <p><i class="fab fa-java"></i><i class="fab fa-gitlab"></i><i class="fas fa-users"></i><i class="fab fa-html5"></i></p>
+                        <h2 data-translate="project-sncf">Application SNCF</h2>
+                        <p class="projet" data-translate="project-study">Projet d'Études</p>
+                        <p><i class="fab fa-java"></i><i class="fab fa-gitlab"></i><i class="fas fa-users"></i><i
+                                class="fab fa-html5"></i></p>
                     </a>
                 </li>
                 <li class="card">
                     <a class="card-image" id="lineconf" style="background-image: url(assets/projets/lineconf.png);">
                     </a>
                     <a class="card-description" id="lineconf">
-                        <h2>LineConf</h2>
-                        <p class="projet">Projet Personnel</p>
-                        <p><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fas fa-lightbulb"></i></p>
+                        <h2 data-translate="project-lineconf">LineConf</h2>
+                        <p class="projet" data-translate="project-personal">Projet Personnel</p>
+                        <p><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fas fa-lightbulb"></i>
+                        </p>
                     </a>
                 </li>
             </ul>
@@ -335,19 +360,20 @@
     <section>
         <div id="space-modal" class="modal">
             <div class="modal-content">
-                <h2>Space Clicker - BUT2 - 2024</h2>
-                <p>Ce projet, nommé SpaceClicker, consistait à développer un jeu de 
-                    type clicker en Java, où le joueur explore l’espace, accumule des 
-                    points, et améliore son équipement pour progresser. L’objectif était 
-                    de réaliser cette application en équipe de cinq personnes en utilisant 
-                    la méthode Scrum sur une période de trois jours. Nous avons structuré 
-                    le développement en plusieurs sprints, ce qui nous a permis d’avancer 
-                    rapidement et d’itérer sur les fonctionnalités clés.</p>
-                <p>Dans ce projet, j’ai contribué à la conception du système de sauvegarde 
-                    et à l’implémentation des interactions utilisateur. En équipe, nous 
-                    avons partagé les tâches pour intégrer efficacement chaque fonctionnalité 
-                    et assurer la fluidité de l’expérience de jeu.</p>
-                <p>Note obtenue pour ce projet : 16/20</p>
+                <h2 data-translate="project-spaceclicker-title">Space Clicker - BUT2 - 2024</h2>
+                <p data-translate="project-spaceclicker-description">
+                    Ce projet, nommé SpaceClicker, consistait à développer un jeu de type clicker en Java, où le joueur
+                    explore l’espace, accumule des points, et améliore son équipement pour progresser. L’objectif était
+                    de réaliser cette application en équipe de cinq personnes en utilisant la méthode Scrum sur une
+                    période de trois jours. Nous avons structuré le développement en plusieurs sprints, ce qui nous a
+                    permis d’avancer rapidement et d’itérer sur les fonctionnalités clés.
+                </p>
+                <p data-translate="project-spaceclicker-contribution">
+                    Dans ce projet, j’ai contribué à la conception du système de sauvegarde et à l’implémentation des
+                    interactions utilisateur. En équipe, nous avons partagé les tâches pour intégrer efficacement chaque
+                    fonctionnalité et assurer la fluidité de l’expérience de jeu.
+                </p>
+                <p data-translate="project-spaceclicker-grade">Note obtenue pour ce projet : 16/20</p>
                 <a href="https://github.com/GiorgioUtzeri/PlanetGame" target="_blank" class="github-btn">
                     <i class="fab fa-github"></i> GitHub
                 </a>
@@ -357,23 +383,24 @@
 
         <div id="parcoursup-modal" class="modal">
             <div class="modal-content">
-                <h2>Parcoursup - BUT1 - 2024</h2>
-                <p>Ce projet consistait à exploiter un fichier de données brutes provenant de 
-                    Parcoursup 2023 et à créer une base de données relationnelle à l’aide de 
-                    PostgreSQL. L'objectif principal était de modéliser ces données, de les 
-                    structurer sous forme de tables et de faire des requêtes SQL pour en 
+                <h2 data-translate="project-parcoursup-title">Parcoursup - BUT1 - 2024</h2>
+                <p data-translate="project-parcoursup-description">
+                    Ce projet consistait à exploiter un fichier de données brutes provenant de Parcoursup 2023 et à
+                    créer une base de données relationnelle à l’aide de PostgreSQL. L'objectif principal était de
+                    modéliser ces données, de les structurer sous forme de tables et de faire des requêtes SQL pour en
                     extraire des informations pertinentes.
                 </p>
-                <p>Dans ce projet, j’ai principalement travaillé sur la modélisation des 
-                    données en créant un MCD et en structurant les données dans des tables 
-                    pour éviter les redondances. J’ai également rédigé des requêtes SQL 
-                    pour ventiler et analyser les données, tout cela en équipe pour ensuite 
-                    rediger un rapport en HTML converti en pdf.
+                <p data-translate="project-parcoursup-contribution">
+                    Dans ce projet, j’ai principalement travaillé sur la modélisation des données en créant un MCD et en
+                    structurant les données dans des tables pour éviter les redondances. J’ai également rédigé des
+                    requêtes SQL pour ventiler et analyser les données, tout cela en équipe pour ensuite rédiger un
+                    rapport en HTML converti en pdf.
                 </p>
-                <p>Note obtenue pour ce projet : 19/20</p>
+                <p data-translate="project-parcoursup-grade">Note obtenue pour ce projet : 19/20</p>
                 <a href="assets/modal/parcoursup.png" target="_blank">
-                    <img src="assets/modal/parcoursup.png" class="modal-image">
-                 </a>
+                    <img src="assets/modal/parcoursup.png" class="modal-image"
+                        data-translate="project-parcoursup-image">
+                </a>
                 <a href="https://github.com/GiorgioUtzeri/parcoursup" target="_blank" class="github-btn">
                     <i class="fab fa-github"></i> GitHub
                 </a>
@@ -383,15 +410,19 @@
 
         <div id="classifier-modal" class="modal">
             <div class="modal-content">
-                <h2>Application Classification - BUT2 - 2024</h2>
-                <p>Ce projet consistait à développer une application capable de charger des 
-                    données CSV, de les visualiser en nuages de points, et de les classifier 
-                    en utilisant l’algorithme k-NN. L’utilisateur peut choisir différents attributs, 
-                    ajuster les paramètres de classification, et la précision du modèle.</p>
-                <p>Dans ce projet, j’ai contribué à la structuration des données et à la mise en place 
-                    de l’interface de visualisation en java. Nous avons travaillé en équipe, en organisant nos 
-                    tâches via GitLab pour garantir un bon développement.</p>
-                <p>Note obtenue pour ce projet : en attente.</p>
+                <h2 data-translate="project-classifier-title">Application Classification - BUT2 - 2024</h2>
+                <p data-translate="project-classifier-description">
+                    Ce projet consistait à développer une application capable de charger des données CSV, de les
+                    visualiser en nuages de points, et de les classifier en utilisant l’algorithme k-NN. L’utilisateur
+                    peut choisir différents attributs, ajuster les paramètres de classification, et la précision du
+                    modèle.
+                </p>
+                <p data-translate="project-classifier-contribution">
+                    Dans ce projet, j’ai contribué à la structuration des données et à la mise en place de l’interface
+                    de visualisation en java. Nous avons travaillé en équipe, en organisant nos tâches via GitLab pour
+                    garantir un bon développement.
+                </p>
+                <p data-translate="project-classifier-grade">Note obtenue pour ce projet : en attente.</p>
                 <a href="https://github.com/GiorgioUtzeri/app-classification" target="_blank" class="github-btn">
                     <i class="fab fa-github"></i> GitHub
                 </a>
@@ -401,44 +432,48 @@
 
         <div id="serveur-modal" class="modal">
             <div class="modal-content">
-                <h2>Serveur de jeu Minecraft - 02/2022 | 10/2022</h2>
-                <p>Ce projet consistait à créer un serveur Minecraft personnalisé, avec 
-                    des ajouts et des fonctionnalités pour améliorer l'expérience de jeu 
-                    des joueurs. J'ai développé plusieurs plugins en Java pour intégrer 
-                    de nouvelles mécaniques de jeu, comme des événements spéciaux et des 
-                    options de personnalisation non présentes dans la version classique. 
-                    Parallèlement, j'ai conçu un site web avec une boutique en ligne reliée 
-                    au serveur, permettant aux joueurs d'acheter des objets et des grades.</p>
-                <p>Le serveur a attiré environ 5000 joueurs, avec une moyenne de 40 joueurs connectés 
-                    quotidiennement. J'ai également géré la promotion du serveur sur les réseaux sociaux 
-                    pour maintenir une audience active. Pour faciliter la gestion, j'ai créé un bot en 
-                    JavaScript qui m'envoyait des notifications avec les informations du serveur sur mon 
-                    téléphone, me permettant ainsi de réagir rapidement à tout problème, même sans accès 
-                    direct à mon PC.</p>
-                    <video class="modal-image" controls autoplay loop muted>
-                        <source src="assets/modal/minecraft.mp4" type="video/mp4">
-                        Votre navigateur ne supporte pas la balise vidéo.
-                      </video>
+                <h2 data-translate="project-server-title">Serveur de jeu Minecraft - 02/2022 | 10/2022</h2>
+                <p data-translate="project-server-description">
+                    Ce projet consistait à créer un serveur Minecraft personnalisé, avec des ajouts et des
+                    fonctionnalités pour améliorer l'expérience de jeu des joueurs. J'ai développé plusieurs plugins en
+                    Java pour intégrer de nouvelles mécaniques de jeu, comme des événements spéciaux et des options de
+                    personnalisation non présentes dans la version classique. Parallèlement, j'ai conçu un site web avec
+                    une boutique en ligne reliée au serveur, permettant aux joueurs d'acheter des objets et des grades.
+                </p>
+                <p data-translate="project-server-promotion">
+                    Le serveur a attiré environ 5000 joueurs, avec une moyenne de 40 joueurs connectés quotidiennement.
+                    J'ai également géré la promotion du serveur sur les réseaux sociaux pour maintenir une audience
+                    active. Pour faciliter la gestion, j'ai créé un bot en JavaScript qui m'envoyait des notifications
+                    avec les informations du serveur sur mon téléphone, me permettant ainsi de réagir rapidement à tout
+                    problème, même sans accès direct à mon PC.
+                </p>
+                <video class="modal-image" controls autoplay loop muted>
+                    <source src="assets/modal/minecraft.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la balise vidéo.
+                </video>
                 <span class="close">&times;</span>
             </div>
         </div>
-        
+
         <div id="ecovoit-modal" class="modal">
             <div class="modal-content">
-                <h2>EcoVoit - BUT1 - 2023</h2>
-                <p>Ce projet consistait à créer un site web de covoiturage pour l’entreprise 
-                    Renault Electricity, visant à encourager l'écologie et l'économie pour les 
-                    employés. Le site, nommé EcoVoit, permet aux utilisateurs de proposer et 
-                    rechercher des covoiturages. Réalisé uniquement en HTML et CSS, il s’agit d’un 
-                    prototype simple de présentation, sans fonctionnalités avancées.</p>
-                <p>Dans ce projet, j'ai contribué à l'organisation et à la structure du code HTML 
-                    et CSS, en utilisant Flexbox pour une mise en page responsive. J’ai également 
-                    aidé à résoudre les problèmes de style et de mise en page en équipe, tout en 
-                    m’assurant que le code soit clair et bien structuré pour les examinateurs.</p>
-            <p>Note obtenue pour ce projet : 16/20</p>
-            <a href="assets/modal/ecovoit.png" target="_blank">
-                <img src="assets/modal/ecovoit.png" class="modal-image">
-             </a>
+                <h2 data-translate="project-ecovoit-title">EcoVoit - BUT1 - 2023</h2>
+                <p data-translate="project-ecovoit-description">
+                    Ce projet consistait à créer un site web de covoiturage pour l’entreprise Renault Electricity,
+                    visant à encourager l'écologie et l'économie pour les employés. Le site, nommé EcoVoit, permet aux
+                    utilisateurs de proposer et rechercher des covoiturages. Réalisé uniquement en HTML et CSS, il
+                    s’agit d’un prototype simple de présentation, sans fonctionnalités avancées.
+                </p>
+                <p data-translate="project-ecovoit-contribution">
+                    Dans ce projet, j'ai contribué à l'organisation et à la structure du code HTML et CSS, en utilisant
+                    Flexbox pour une mise en page responsive. J’ai également aidé à résoudre les problèmes de style et
+                    de mise en page en équipe, tout en m’assurant que le code soit clair et bien structuré pour les
+                    examinateurs.
+                </p>
+                <p data-translate="project-ecovoit-grade">Note obtenue pour ce projet : 16/20</p>
+                <a href="assets/modal/ecovoit.png" target="_blank">
+                    <img src="assets/modal/ecovoit.png" class="modal-image">
+                </a>
                 <a href="https://github.com/GiorgioUtzeri/EcoVoit" target="_blank" class="github-btn">
                     <i class="fab fa-github"></i> GitHub
                 </a>
@@ -448,15 +483,18 @@
 
         <div id="portfolio-modal" class="modal">
             <div class="modal-content">
-                <h2>Portfolio - BUT2 - 2024</h2>
-                <p>Ce projet consistait à concevoir et développer mon portfolio, giorgio-dev.com, 
-                    pour présenter mes compétences, mes projets, et mon parcours professionnel. 
-                    L’objectif était de créer une vitrine moderne et intuitive, reflétant ma passion 
-                    pour le développement et le design.</p> 
-                <p>Dans ce projet, j’ai utilisé HTML, CSS, et JavaScript pour une navigation fluide et 
-                    responsive. J’ai également veillé à structurer les informations de manière claire 
-                    pour offrir une expérience utilisateur optimale.</p> 
-            <p>Note obtenue pour ce projet : en attente.</p>
+                <h2 data-translate="project-portfolio-title">Portfolio - BUT2 - 2024</h2>
+                <p data-translate="project-portfolio-description">
+                    Ce projet consistait à concevoir et développer mon portfolio, giorgio-dev.com, pour présenter mes
+                    compétences, mes projets, et mon parcours professionnel. L’objectif était de créer une vitrine
+                    moderne et intuitive, reflétant ma passion pour le développement et le design.
+                </p>
+                <p data-translate="project-portfolio-contribution">
+                    Dans ce projet, j’ai utilisé HTML, CSS, et JavaScript pour une navigation fluide et responsive. J’ai
+                    également veillé à structurer les informations de manière claire pour offrir une expérience
+                    utilisateur optimale.
+                </p>
+                <p data-translate="project-portfolio-grade">Note obtenue pour ce projet : en attente.</p>
                 <a href="https://github.com/GiorgioUtzeri/portfolio" target="_blank" class="github-btn">
                     <i class="fab fa-github"></i> GitHub
                 </a>
@@ -466,22 +504,25 @@
 
         <div id="sncf-modal" class="modal">
             <div class="modal-content">
-                <h2>Application SNCF - BUT1 - 2024</h2>
-                <p>Ce projet consistait à développer une application d’assistant de voyage 
-                    permettant de calculer, visualiser et comparer des itinéraires multimodaux 
-                    entre différentes villes, tout en prenant en compte des critères tels que le 
-                    coût, le temps et les émissions de CO2 pour proposer les meilleurs trajets.</p> 
-                <p>Dans ce projet, j'ai principalement travaillé sur de la programmation Java, 
-                    la modélisation de graphes, ainsi que sur l’utilisation de JavaFX pour 
-                    la conception de l'interface utilisateur. J’ai également participé à l'optimisation 
-                    des algorithmes et à la mise en œuvre des fonctionnalités pour calculer et comparer 
-                    les itinéraires. Nous avons travaillé en équipe pour réaliser l'application, en se 
-                    répartissant les tâches les plus complexes.</p> 
-                <p>Note obtenue pour ce projet : 15/20</p>
+                <h2 data-translate="project-sncf-title">Application SNCF - BUT1 - 2024</h2>
+                <p data-translate="project-sncf-description">
+                    Ce projet consistait à développer une application d’assistant de voyage permettant de calculer,
+                    visualiser et comparer des itinéraires multimodaux entre différentes villes, tout en prenant en
+                    compte des critères tels que le coût, le temps et les émissions de CO2 pour proposer les meilleurs
+                    trajets.
+                </p>
+                <p data-translate="project-sncf-contribution">
+                    Dans ce projet, j'ai principalement travaillé sur de la programmation Java, la modélisation de
+                    graphes, ainsi que sur l’utilisation de JavaFX pour la conception de l'interface utilisateur. J’ai
+                    également participé à l'optimisation des algorithmes et à la mise en œuvre des fonctionnalités pour
+                    calculer et comparer les itinéraires. Nous avons travaillé en équipe pour réaliser l'application, en
+                    se répartissant les tâches les plus complexes.
+                </p>
+                <p data-translate="project-sncf-grade">Note obtenue pour ce projet : 15/20</p>
                 <video class="modal-image" controls autoplay loop muted>
                     <source src="assets/modal/demo.mp4" type="video/mp4">
                     Votre navigateur ne supporte pas la balise vidéo.
-                  </video>
+                </video>
                 <a href="https://github.com/GiorgioUtzeri/app-voyages" target="_blank" class="github-btn">
                     <i class="fab fa-github"></i> GitHub
                 </a>
@@ -491,20 +532,23 @@
 
         <div id="echec-modal" class="modal">
             <div class="modal-content">
-                <h2>Jeu d'échec - Terminale - 2023</h2>
-                <p>Ce projet est un jeu d'échecs en ligne réalisé pour un projet informatique 
-                    en première avec la spécialité NSI. Le jeu permet à deux joueurs de s'affronter 
-                    sur le même écran. L'objectif était de créer une interface simple et fluide, 
-                    tout en ayant la possibilité d’ajouter un mode multijoueur dans le futur.</p>
-                <p>Dans ce projet, j’ai principalement travaillé sur le développement de l'interface 
-                    en HTML, CSS et JavaScript avec la librairie jQuery. Une grande partie de mon travail a consisté 
-                    à concevoir le design du site et à créer une interface intuitive pour les utilisateurs. 
-                    J'ai aussi dû faire face à plusieurs défis techniques, notamment la gestion des 
-                    interactions entre les pièces et l'interface, que j’ai résolus par des tests et des 
-                    ajustements successifs.</p>
-                    <a href="assets/modal/echec.png" target="_blank">
-                        <img src="assets/modal/echec.png" class="modal-image">
-                     </a>
+                <h2 data-translate="project-echec-title">Jeu d'échec - Terminale - 2023</h2>
+                <p data-translate="project-echec-description">
+                    Ce projet est un jeu d'échecs en ligne réalisé pour un projet informatique en première avec la
+                    spécialité NSI. Le jeu permet à deux joueurs de s'affronter sur le même écran. L'objectif était de
+                    créer une interface simple et fluide, tout en ayant la possibilité d’ajouter un mode multijoueur
+                    dans le futur.
+                </p>
+                <p data-translate="project-echec-contribution">
+                    Dans ce projet, j’ai principalement travaillé sur le développement de l'interface en HTML, CSS et
+                    JavaScript avec la librairie jQuery. Une grande partie de mon travail a consisté à concevoir le
+                    design du site et à créer une interface intuitive pour les utilisateurs. J'ai aussi dû faire face à
+                    plusieurs défis techniques, notamment la gestion des interactions entre les pièces et l'interface,
+                    que j’ai résolus par des tests et des ajustements successifs.
+                </p>
+                <a href="assets/modal/echec.png" target="_blank">
+                    <img src="assets/modal/echec.png" class="modal-image">
+                </a>
                 <a href="https://github.com/GiorgioUtzeri/Echec-Et-Math" target="_blank" class="github-btn">
                     <i class="fab fa-github"></i> GitHub
                 </a>
@@ -514,23 +558,25 @@
 
         <div id="planet-modal" class="modal">
             <div class="modal-content">
-                <h2>PlanetGame - BUT1 - 2023</h2>
-                <p>Ce projet est un jeu éducatif en trois niveaux pour apprendre le système solaire. 
-                    L'élève commence par un memory game pour associer les positions des planètes. Au 
-                    niveau suivant, il doit replacer chaque planète autour du soleil dans le bon ordre 
-                    avec trois essais possibles. Le dernier niveau est un quiz final sur les planètes. 
-                    L'élève gagne s’il réussit les trois niveaux.</p>
-                <p>Dans ce projet, j’ai principalement travaillé sur le développement informatique du jeu, 
-                    en utilisant Visual Studio Code et GitLab pour la gestion du code. J’ai aussi dû me plonger
-                     dans la documentation d’ijavac pour mettre en place des fonctionnalités complexes, comme 
-                     le système de sauvegarde des progrès de l’utilisateur et la gestion de base de données pour 
-                     stocker les scores et les réponses. J’ai effectué de nombreux tests pour m’assurer du bon 
-                     fonctionnement de chaque fonctionnalité, en ajustant progressivement le code pour améliorer 
-                     l’expérience de jeu.</p>
-                <p>Note obtenue pour ce projet : 20/20</p>
-                     <a href="assets/modal/planetgame.png" target="_blank">
-                        <img src="assets/modal/planetgame.png" class="modal-image">
-                     </a>
+                <h2 data-translate="project-planetgame-title">PlanetGame - BUT1 - 2023</h2>
+                <p data-translate="project-planetgame-description">
+                    Ce projet est un jeu éducatif en trois niveaux pour apprendre le système solaire. L'élève commence
+                    par un memory game pour associer les positions des planètes. Au niveau suivant, il doit replacer
+                    chaque planète autour du soleil dans le bon ordre avec trois essais possibles. Le dernier niveau est
+                    un quiz final sur les planètes. L'élève gagne s’il réussit les trois niveaux.
+                </p>
+                <p data-translate="project-planetgame-contribution">
+                    Dans ce projet, j’ai principalement travaillé sur le développement informatique du jeu, en utilisant
+                    Visual Studio Code et GitLab pour la gestion du code. J’ai aussi dû me plonger dans la documentation
+                    d’ijavac pour mettre en place des fonctionnalités complexes, comme le système de sauvegarde des
+                    progrès de l’utilisateur et la gestion de base de données pour stocker les scores et les réponses.
+                    J’ai effectué de nombreux tests pour m’assurer du bon fonctionnement de chaque fonctionnalité, en
+                    ajustant progressivement le code pour améliorer l’expérience de jeu.
+                </p>
+                <p data-translate="project-planetgame-grade">Note obtenue pour ce projet : 20/20</p>
+                <a href="assets/modal/planetgame.png" target="_blank">
+                    <img src="assets/modal/planetgame.png" class="modal-image">
+                </a>
                 <a href="https://github.com/GiorgioUtzeri/PlanetGame" target="_blank" class="github-btn">
                     <i class="fab fa-github"></i> GitHub
                 </a>
@@ -540,44 +586,50 @@
 
         <div id="line-modal" class="modal">
             <div class="modal-content">
-                <h2>LineConf - 01/2022</h2>
-                <p>Ce projet consistait à organiser un événement appelé LineConf, où des développeurs 
-                    se réunissent en équipes de trois pour créer une application autour d'un thème donné,
-                     en utilisant le langage de programmation de leur choix. L'événement dure 15 jours, 
-                     et à la fin, un concours est organisé pour élire et récompenser le meilleur projet 
-                     parmi les participants.</p>
-                    <p> Pour cet événement, j'ai développé un site web statique permettant aux participants 
-                        de s'inscrire, d'obtenir toutes les informations sur le concours et de découvrir le 
-                        thème. Le site offrait également la possibilité d'envoyer les projets une 
-                        fois terminés, facilitant ainsi l'organisation du concours.</p>
-                        <a href="assets/modal/lineconf.png" target="_blank">
-                            <img src="assets/modal/lineconf.png" class="modal-image">
-                         </a>
+                <h2 data-translate="project-lineconf-title">LineConf - 01/2022</h2>
+                <p data-translate="project-lineconf-description">
+                    Ce projet consistait à organiser un événement appelé LineConf, où des développeurs se réunissent en
+                    équipes de trois pour créer une application autour d'un thème donné, en utilisant le langage de
+                    programmation de leur choix. L'événement dure 15 jours, et à la fin, un concours est organisé pour
+                    élire et récompenser le meilleur projet parmi les participants.
+                </p>
+                <p data-translate="project-lineconf-contribution">
+                    Pour cet événement, j'ai développé un site web statique permettant aux participants de s'inscrire,
+                    d'obtenir toutes les informations sur le concours et de découvrir le thème. Le site offrait
+                    également la possibilité d'envoyer les projets une fois terminés, facilitant ainsi l'organisation du
+                    concours.
+                </p>
+                <a href="assets/modal/lineconf.png" target="_blank">
+                    <img src="assets/modal/lineconf.png" class="modal-image">
+                </a>
                 <a href="https://github.com/GiorgioUtzeri/LineConf" target="_blank" class="github-btn">
                     <i class="fab fa-github"></i> GitHub
                 </a>
                 <span class="close">&times;</span>
             </div>
         </div>
-
     </section>
 
     <section id="formations" class="formations section">
         <div class="cont-formations">
-            <h1>Formations</h1>
+            <h1 data-translate="formations-title">Formations</h1>
             <div class="key-formations">
                 <div class="formation">
                     <span class="icon">🎓</span>
-                    <h3>BUT Informatique</h3>
-                    <h4>09/2023 - Aujourd'hui</h4>
-                    <p>Parcours réalisation d'application : conception, développement, validation. À l'Université de
-                        Lille de Villeneuve d’Ascq</p>
+                    <h3 data-translate="formation-but-title">BUT Informatique</h3>
+                    <h4 data-translate="formation-but-dates">09/2023 - Aujourd'hui</h4>
+                    <p data-translate="formation-but-description">
+                        Parcours réalisation d'application : conception, développement, validation. À l'Université de
+                        Lille de Villeneuve d’Ascq
+                    </p>
                 </div>
                 <div class="formation">
                     <span class="icon">📚</span>
-                    <h3>Baccalauréat</h3>
-                    <h4>09/2020 | 07/2023</h4>
-                    <p>Spécialités Mathématiques, physique et NSI. Au lycée Arthur Rimbaud de Sin-Le-Noble</p>
+                    <h3 data-translate="formation-bac-title">Baccalauréat</h3>
+                    <h4 data-translate="formation-bac-dates">09/2020 | 07/2023</h4>
+                    <p data-translate="formation-bac-description">
+                        Spécialités Mathématiques, physique et NSI. Au lycée Arthur Rimbaud de Sin-Le-Noble
+                    </p>
                 </div>
             </div>
         </div>
@@ -585,15 +637,17 @@
 
     <section id="experiences" class="experiences section">
         <div class="cont-experiences">
-            <h1>Éxpériences</h1>
+            <h1 data-translate="experiences-title">Éxpériences</h1>
             <div class="cont-timeline">
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-content left">
-                            <h3>06/2024</h3>
-                            <h4>Agent d'entretien</h4>
-                            <h5>Piscine des Glacis - Douai</h5>
-                            <p>Agent d’entretien (entretien des cabines et des sanitaires) ainsi que l’accueil clients, en tant qu’emploi saisonnier étudiant à mes 18 ans.</p>
+                            <h3 data-translate="experience-date-06-2024">06/2024</h3>
+                            <h4 data-translate="experience-job-06-2024">Agent d'entretien</h4>
+                            <h5 data-translate="experience-location-06-2024">Piscine des Glacis - Douai</h5>
+                            <p data-translate="experience-description-06-2024">Agent d’entretien (entretien des cabines
+                                et des sanitaires) ainsi que l’accueil clients, en tant qu’emploi saisonnier étudiant à
+                                mes 18 ans.</p>
                         </div>
                         <div class="circle"></div>
                     </div>
@@ -601,19 +655,23 @@
                     <div class="timeline-item">
                         <div class="circle"></div>
                         <div class="timeline-content right">
-                            <h3>07/2024 | 09/2024</h3>
-                            <h4>Employé polyvalent</h4>
-                            <h5>APE Du Douaisis - Douai</h5>
-                            <p>Employé Polyvalent (communication, travail informatique, gestion d’attribution et d’adhérents) en tant qu’emploi saisonnier à mes 18ans.</p>
+                            <h3 data-translate="experience-date-07-2024">07/2024 | 09/2024</h3>
+                            <h4 data-translate="experience-job-07-2024">Employé polyvalent</h4>
+                            <h5 data-translate="experience-location-07-2024">APE Du Douaisis - Douai</h5>
+                            <p data-translate="experience-description-07-2024">Employé Polyvalent (communication,
+                                travail informatique, gestion d’attribution et d’adhérents) en tant qu’emploi saisonnier
+                                à mes 18 ans.</p>
                         </div>
                     </div>
 
                     <div class="timeline-item">
                         <div class="timeline-content left">
-                            <h3>Année 2023</h3>
-                            <h4>Développeur Web</h4>
-                            <h5>APE Du Douaisis - Douai</h5>
-                            <p>J’ai développé la refonte du site internet de l’APE Du Douaisis permettant ainsi aux adhérents d’avoir une meilleure facilité d’accès à mes 17ans.</p>
+                            <h3 data-translate="experience-date-2023">Année 2023</h3>
+                            <h4 data-translate="experience-job-2023">Développeur Web</h4>
+                            <h5 data-translate="experience-location-2023">APE Du Douaisis - Douai</h5>
+                            <p data-translate="experience-description-2023">J’ai développé la refonte du site internet
+                                de l’APE Du Douaisis permettant ainsi aux adhérents d’avoir une meilleure facilité
+                                d’accès à mes 17 ans.</p>
                         </div>
                         <div class="circle"></div>
                     </div>
@@ -621,20 +679,24 @@
                     <div class="timeline-item">
                         <div class="circle"></div>
                         <div class="timeline-content right">
-                            <h3>06/2023 | 09/2023</h3>
-                            <h4>Employé polyvalent</h4>
-                            <h5>APE Du Douaisis - Douai</h5>
-                            <p>Employé Polyvalent (communication, travail informatique, gestion d’attribution et d’adhérents)  en tant qu’emploi saisonnier à mes 17ans.</p>
+                            <h3 data-translate="experience-date-06-2023">06/2023 | 09/2023</h3>
+                            <h4 data-translate="experience-job-06-2023">Employé polyvalent</h4>
+                            <h5 data-translate="experience-location-06-2023">APE Du Douaisis - Douai</h5>
+                            <p data-translate="experience-description-06-2023">Employé Polyvalent (communication,
+                                travail informatique, gestion d’attribution et d’adhérents) en tant qu’emploi saisonnier
+                                à mes 17 ans.</p>
                         </div>
                     </div>
 
                     <div class="timeline-item">
                         <div class="circle"></div>
                         <div class="timeline-content left">
-                            <h3>06/2022 | 09/2022</h3>
-                            <h4>Employé polyvalent</h4>
-                            <h5>APE Du Douaisis - Douai</h5>
-                            <p>Employé Polyvalent (communication, travail informatique, gestion d’attribution et d’adhérents)  en tant qu’emploi saisonnier à mes 16ans.</p>
+                            <h3 data-translate="experience-date-06-2022">06/2022 | 09/2022</h3>
+                            <h4 data-translate="experience-job-06-2022">Employé polyvalent</h4>
+                            <h5 data-translate="experience-location-06-2022">APE Du Douaisis - Douai</h5>
+                            <p data-translate="experience-description-06-2022">Employé Polyvalent (communication,
+                                travail informatique, gestion d’attribution et d’adhérents) en tant qu’emploi saisonnier
+                                à mes 16 ans.</p>
                         </div>
                     </div>
                 </div>
@@ -644,72 +706,63 @@
 
     <section id="contact" class="contact section">
         <div class="cont-contact">
-            <h1>Contact</h1>
+            <h1 data-translate="contact-title">Contact</h1>
             <div class="contact-form">
                 <form id="contact-form">
-                  <label for="name">Nom</label>
-                  <input type="text" id="name" name="name" placeholder="Votre nom" required>
-              
-                  <label for="email">E-mail</label>
-                  <input type="email" id="email" name="email" placeholder="Votre adresse e-mail" required>
-              
-                  <label for="message">Message</label>
-                  <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
-              
-                  <button type="submit" class="submit" id="submit">Envoyer</button>
+                    <label for="name" data-translate="contact-label-name">Nom</label>
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
+
+                    <label for="email" data-translate="contact-label-email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Votre adresse e-mail" required>
+
+                    <label for="message" data-translate="contact-label-message">Message</label>
+                    <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
+
+                    <button type="submit" class="submit" id="submit"
+                        data-translate="contact-submit-button">Envoyer</button>
                 </form>
             </div>
-            <p class="confirm-submit" id="confirm-submit">J'ai bien reçu votre message, il a été envoyé avec succès ! Je reviendrai vers vous dans les plus brefs délais.</p>
+            <p class="confirm-submit" id="confirm-submit" data-translate="contact-confirm-submit">J'ai bien reçu votre
+                message, il a été envoyé avec succès ! Je reviendrai vers vous dans les plus brefs délais.</p>
         </div>
     </section>
 
     <footer class="footer">
-    
         <div class="f-left">
-
             <h3>Giorgio <span>UTZERI</span></h3>
-
             <p class="f-liens">
-                <a href="#" class="lien-1">Accueil</a>
-                
-                <a href="#a-propos">À Propos</a>
-            
-                <a href="#competences">Compétences</a>
-            
-                <a href="#projets">Projets</a>
-                
-                <a href="#formations">Formations</a>
-                
-                <a href="#experiences">Expériences</a>
-
-                <a href="#contact">Contact</a>
+                <a href="#" class="lien-1" data-translate="footer-home">Accueil</a>
+                <a href="#a-propos" data-translate="footer-about">À Propos</a>
+                <a href="#competences" data-translate="footer-skills">Compétences</a>
+                <a href="#projets" data-translate="footer-projects">Projets</a>
+                <a href="#formations" data-translate="footer-education">Formations</a>
+                <a href="#experiences" data-translate="footer-experience">Expériences</a>
+                <a href="#contact" data-translate="footer-contact">Contact</a>
             </p>
         </div>
 
         <div class="f-center">
-
             <div>
                 <i class="fas fa-map-marker-alt"></i>
-                <p><span>Hellemmes</span>59296</p>
+                <p><span data-translate="footer-location-hellemmes">Hellemmes</span>59296</p>
             </div>
 
             <div>
                 <i class="fas fa-map-marker-alt"></i>
-                <p><span>Sin-Le-Noble</span>59450</p>
+                <p><span data-translate="footer-location-sinle">Sin-Le-Noble</span>59450</p>
             </div>
 
             <div>
                 <i class="fa fa-envelope"></i>
-                <p><a href="mailto:gioutzeri@gmail.com">gioutzeri@gmail.com</a></p>
+                <p><a href="mailto:gioutzeri@gmail.com" data-translate="footer-email">gioutzeri@gmail.com</a></p>
             </div>
-
         </div>
 
         <div class="f-right">
-
-            <p class="reseaux"><span>Mes réseaux :</span></p>
+            <p class="reseaux"><span data-translate="footer-social-media">Mes réseaux :</span></p>
             <div class="f-icons">
-                <a href="https://www.linkedin.com/in/giorgio-utzeri-504b7b25a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/giorgio-utzeri-504b7b25a/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/GiorgioUtzeri" target="_blank"><i class="fab fa-github"></i></a>
             </div>
         </div>
@@ -717,4 +770,5 @@
 
     <script type="text/javascript" src="src/index.js"></script>
 </body>
+
 </html>
