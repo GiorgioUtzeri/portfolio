@@ -1,0 +1,196 @@
+.competences {
+  height: auto;
+  padding: 2vh 0;
+  background-color: rgba(244, 241, 235);
+}
+
+.compPoly {
+  margin-top: 5vh;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.compPoly h1 {
+  padding: 20px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+.compPoly h1::after {
+  content: '';
+  display: block;
+  width: 130px;
+  height: 3px;
+  background-color: #6B7D8A;
+  margin: 6px;
+}
+
+.card-sheet {
+  zoom: 0.90;
+  color: rgb(0, 0, 0);
+  font-family: 'Inika', sans-serif;
+  font-size: x-large;
+  font-weight: lighter;
+  width: 100%;
+  position: relative;
+  left: -125%;
+  transition-duration: 1.5s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  height: 500px;
+  width: auto;
+}
+
+.card-slide {
+  left: 0%;
+}
+
+.flip-container,
+.front,
+.back {
+  border-radius: 5%;
+  transition: 1s;
+}
+
+.flip-container {
+  height: 90%;
+  width: 23%;
+  max-width: 250px;
+  min-width: 190px;
+  padding: 0;
+  margin: 0;
+}
+
+.flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flipper {
+  transition: .6s;
+  transform-style: preserve-3d;
+  position: relative;
+  height: inherit;
+  width: 100%
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top right, #BBC7CE, #BBC7CE);
+  height: inherit;
+  width: 100%;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.front p {
+  font-weight: bold;
+  border-bottom: solid rgb(0, 0, 0);
+
+  width: 180px;
+  padding-bottom: 20px;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.back li {
+  text-align: start;
+  padding-bottom: 10px;
+}
+
+#skill-modal ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#who-modal {
+  flex-direction: column;
+  text-align: left;
+  font-size: 70%;
+  font-size: .65em;
+}
+
+#who-modal p {
+  padding: 0;
+}
+
+#skill-modal h1 {
+  font-size: 120%;
+  text-decoration: underline;
+}
+
+#skill-modal li {
+  font-size: 75%;
+  margin: 5px;
+}
+
+#skill-modal hr {
+  width: 95%;
+}
+
+
+.gallery figure img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .card-sheet {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: auto;
+  }
+
+  .flip-container {
+    min-width: 250px;
+    width: 90%;
+    height: 200px;
+  }
+
+  .back {
+    font-size: 70%;
+    font-family: 'Inika', sans-serif;
+    color: black;
+  }
+
+  .compPoly h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .contact-container {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 801px) {
+
+  .flip-container:hover .flipper,
+  .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+  .back {
+    font-size: 65%;
+  }
+}
