@@ -146,5 +146,11 @@
   "footer-location-hellemmes": "Hellemmes",
   "footer-location-sinle": "Sin-Le-Noble",
   "footer-email": "gioutzeri@gmail.com",
-  "footer-social-media": "Mes réseaux"
+  "footer-social-media": "Mes réseaux",
+  "skill-fr": "Français",
+  "skill-fr-desc": "Langue Maternelle",
+  "skill-it": "Italien",
+  "skill-it-desc": "Double Nationalité",
+  "skill-en": "Anglais",
+  "skill-en-desc": "Niveau B1+"
 }

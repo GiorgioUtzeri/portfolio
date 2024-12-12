@@ -107,22 +107,22 @@
                         <button onclick="changeLanguage('fr')" style="background-color: #BBC7CE;">
                             <img src="assets/France.png">
                         </button>
-                        <h1>Français</h1>
-                        <p>Langue Maternelle</p>
+                        <h1 data-translate="skill-fr">Français</h1>
+                        <p data-translate="skill-fr-desc">Langue Maternelle</p>
                     </div>
                     <div class="italien">
                         <button onclick="changeLanguage('it')" style="background-color: #BBC7CE;">
                             <img src="assets/Italie.png">
                         </button>
-                        <h1>Italien</h1>
-                        <p>Double Nationalité</p>
+                        <h1 data-translate="skill-it">Italien</h1>
+                        <p data-translate="skill-it-desc">Double Nationalité</p>
                     </div>
                     <div class="anglais">
                         <button onclick="changeLanguage('en')" style="background-color: #BBC7CE;">
                             <img src="assets/anglais.png">
                         </button>
-                        <h1>Anglais</h1>
-                        <p>Niveau B1+</p>
+                        <h1 data-translate="skill-en">Anglais</h1>
+                        <p data-translate="skill-en-desc">Niveau B1+</p>
                     </div>
                 </div>
             </div>
@@ -713,10 +713,10 @@
                     <input type="text" id="name" name="name" placeholder="Votre nom" required>
 
                     <label for="email" data-translate="contact-label-email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="Votre adresse e-mail" required>
+                    <input type="email" id="email" name="email" placeholder="E-mail" required>
 
                     <label for="message" data-translate="contact-label-message">Message</label>
-                    <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
+                    <textarea id="message" name="message" placeholder="message" rows="5" required></textarea>
 
                     <button type="submit" class="submit" id="submit"
                         data-translate="contact-submit-button">Envoyer</button>
